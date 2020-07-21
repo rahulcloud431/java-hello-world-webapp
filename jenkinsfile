@@ -3,6 +3,6 @@ node('master'){
 	git url: 'https://github.com/rahulcloud431/java-hello-world-webapp.git'
         sh 'mvn clean package'
         sh 'sudo cp /var/lib/jenkins/workspace/hello-java-fs/target/java-hello-world.war /var/lib/tomcat8/webapps/'
-	sudo service tomcat8 restart
+	sh 'sudo service tomcat8 restart'
 	    }
 }
